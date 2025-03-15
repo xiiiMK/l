@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Casse tête</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            font-size: 10px;
+        }
+
+        .conteneur1 {
+            flex: 0 1 auto;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .entete {
+            font-size: 37px;
+        }
+
+        .conteneur2 {
+            flex: 1 1 auto;
+            /* flex-grow  flex-shrink  calc-auto */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .statistique {
+            flex: 0 1 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .etiquette {
+            font-size: 30px;
+            margin: 0;
+        }
+
+        .valeur {
+            font-size: 20px;
+            margin: 0 0;
+        }
+
+        .statut {
+            font-size: 20px;
+            margin: 0 0;
+        }
+
+        .barre_outils {
+            flex: 0 1 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .outil {
+            height: 25px;
+            width: 100px;
+            margin: 4px;
+            border-width: 1px;
+            font-size: 20px;
+        }
+
+        .casse_tete {
+            flex: 0 1 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            /* background-color: honeydew; */
+        }
+
+        .ligne {
+            flex: 0 1 auto;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .case {
+            height: 75px;
+            width: 75px;
+            border-width: 1px;
+            background-color: lightblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="conteneur1">
+        <h1 class="entete">Casse-tête</h1>
+    </div>
+    <div class="conteneur2" id="ct_conteneur">
+         
+        </div> 
+        <div class=barre_outils>
+            <button class="outil" id="nouveau">Nouveau</button>
+        </div>
+        <div class="conteneur1">
+            <div class="statistique">
+                <p class="etiquette">Meilleur</p>
+                <p class="valeur" id="meilleur">0</p>
+            </div>
+            <div class="statistique">
+                <p class="etiquette">Pire</p>
+                <p class="valeur" id="pire">0</p>
+            </div>
+            <div class="statistique">
+                <p class="etiquette">Courant</p>
+                <p class="valeur" id="courant">0</p>
+            </div>
+        </div>
+
+        <div class="conteneur1">
+            <p class="statut" id="statut"></p>
+        </div>
+    </div>
+    <script src="scripts/ct.js"> </script>
+</body>
+
+</html>
