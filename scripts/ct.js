@@ -87,9 +87,9 @@ function créerHTMLCT2D() {
 
     for (let i = 0; i < NbLignes; i++) {
         const ligne = document.createElement("div");
-        ligne.className = "ligne"; // Corrigé ici
+        ligne.className = "ligne";
         for (let j = 0; j < NbColonnes; j++) {
-            const caseBtn = document.createElement("button"); // Corrigé ici
+            const caseBtn = document.createElement("button"); 
             caseBtn.className = "case";
             caseBtn.textContent = CT2D[i][j] === VIDE ? "" : CT2D[i][j];
             ligne.appendChild(caseBtn);
@@ -116,7 +116,7 @@ function rafraichirHTMLCT2D() {
     const cases = document.querySelectorAll(".case");
     let index = 0;
     for (let l = 0; l < NbLignes; l++) {
-        for (let c = 0; c < NbColonnes; c++) { // Corrigé ici
+        for (let c = 0; c < NbColonnes; c++) { 
             cases[index].textContent = CT2D[l][c] === VIDE ? "" : CT2D[l][c];
             index++;
         }
@@ -156,11 +156,9 @@ function nouveau() {
     rafraichirAffichage();
 }
 
-// ajout au DOM de la représentation HTML du casse-tête
+
 document.querySelector("#ct_conteneur").prepend(créerHTMLCT2D());
-// installation des fonctions de rappel sur les cases du casse-tête
+
 initCaseOnClick();
-// installation de la fonction de rappel sur le bouton nouveau
 document.querySelector("#nouveau").onclick = nouveau;
-// Affichage initial du casse-tête
 rafraichirHTMLCT2D();
