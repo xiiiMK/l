@@ -1,3 +1,5 @@
+// loic beaupre
+
 "use strict";
 
 const VIDE = ' ';
